@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] vetor = new int[8];
+            int i, j;
+            double soma=0 ,media=0;
+            for(i = 0; i < vetor.Length;i++)
+            {
+                Console.WriteLine("Digite um numero");
+                vetor[i] = int.Parse(Console.ReadLine());
+                soma += vetor[i];
+            }
+            media = soma / 8;
+            Console.WriteLine("Media dos valores: {0}", media);
+            for (i = 0; i < vetor.Length; i++)
+            {
+                if (vetor[i] >= media)
+                {
+                    Console.WriteLine("Acima da media: {0}", vetor[i]);
+                }
+                else
+                {
+                    Console.WriteLine("Abaixo da media: {0}", vetor[i]);
+                }
+            }
+            for (i = 0; i < vetor.Length; i++)
+            {
+                Console.WriteLine("Valor do vetor na posição {0} é: {1}",i,vetor[i]);
+            }
+             Console.ReadKey();
+            /*	   _    _____         _
+             	   \`,""   ,'7"r-..__/ \
+            	  ,'\ `, ,',','    _/   \
+            	 /   \  7 / /     (   \ |
+            	J     \/ j  L______\  / |
+            	L   __JF"""/""\"\_,    /
+            	L,-"| O|  f O |  L_  _/
+            	F   \_ /  \__/   `-  j|
+            		.-'    `"""    ,' |          _..====.._
+            		\__/         r"_  A        ,' _..---.._`,
+            		 `-.______,,-L// / \  ___,' ,'_..:::.. `,`,
+            				  j   / / / 7"    `-<""=:'  '':. \ \
+            				 /   <,' /  F  . i , \   `,    :T W I
+            				 |    \,'  /    >X<  |     \   :| | L
+            				 |     `._/    ' ! ` |      I  :| |  G
+             				  \           \     /       |  :H T  |
+            				 __>-.__   __,-\   |        |  S P   |
+            				/     /|   | \  \  \_       | 'A R   |
+            			   /   __/ |   |  L  L   \      K./ /    L
+            			  /   |    |   4  I  I    |    E./ /   ,'
+            			 J    \    I    L F  I    |    // / _,'
+            	_________|     |   F    |J   F    |   //_/-'
+            	\   __   |    /   J     |/  J     |  /="
+            	\\  \_\  \__,' \  F     |   F     |
+            	\\\_____________\/      F__/      F
+            	 \\|  HTML for  |_____/  (______/
+            	  \/__Dummies___/
+            */
+        }
+    }
+}
