@@ -1,0 +1,144 @@
+#include <stdio.h>
+int mdc(int a, int b)
+{
+    if(a==b)
+    {
+        return a;
+
+    }
+    else if(a>b)
+    {
+        return mdc(a-b,b);
+    }
+    else
+        return mdc(a,b-a);
+}
+
+
+int main()
+{
+    int a;
+    int b;
+    printf("Digite o primeiro numero:");
+    scanf("%d", &a);
+    printf("Digite o segundo numero:");
+    scanf("%d", &b);
+    int resultado=mdc(a,b);
+    printf("%d",resultado);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int somatorio(int n){
+if(n==1){
+    return 1;
+}else
+return n+ somatorio(n-1);
+}
+int main(){
+    int a;
+printf("Quantos numeros serao somados:");
+scanf("%d",&a);
+int result=somatorio(a);
+printf("%d", result);
+}
+
+
+
+
+
+
+
+#include <stdio.h>
+int potencia(int i, int j){
+if(j==0){
+    return 1;
+}else{
+return i * potencia(i,j-1);
+}
+}
+
+int main(){
+    int a=0;
+    int b=0;
+    int result=0;
+printf("Numero que sera elevado:");
+scanf("%d",&a);
+printf("Numero da potencia: ");
+scanf("%d", &b);
+result=potencia(a,b);
+printf("%d", result);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+int mult(int i, int j){
+if(j==0){
+    return 0;
+}else{
+return i + mult(i,j-1);
+}
+}
+
+int main(){
+    int a=0;
+    int b=0;
+    int result=0;
+printf("Primeiro numero:");
+scanf("%d",&a);
+printf("Segundo numero:");
+scanf("%d", &b);
+result=mult(a,b);
+printf("%d", result);
+}
+
+
+
+
+
+
+
+
+#include <stdio.h>
+float div(float n, float m){
+if(n<m){
+    return 0;
+}
+else{
+return 1+div(n-m,m);
+}
+}
+
+int main(){
+    float a=0;
+    float b=0;
+    int result=0;
+printf("Primeiro numero:");
+scanf("%f",&a);
+printf("Segundo numero:");
+scanf("%f",&b);
+result=div(a,b);
+printf("%d", result);
+}
+
+
