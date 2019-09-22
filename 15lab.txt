@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+int mult(int n, int m,int soma){
+if(n==1){
+    soma+=m;
+    return soma;
+}
+else if(n%2==1){
+    return mult(n/2,m*2,soma+=m);
+}else{
+return mult(n/2,m*2,soma);
+}
+}
+int main(){
+int n;
+int m;
+int soma=0;
+printf("Digite o primeiro numero: \n");
+scanf("%d",&n);
+printf("Digite o segundo numero: \n");
+scanf("%d",&m);
+int result=mult(n,m,soma);
+printf("%d X %d = %d",n,m,result);
+}
